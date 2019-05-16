@@ -208,7 +208,7 @@ describe('Testing Angular Js', function () {
                     }
                 );
 
-                isolateScope.getWeather(scope.destination);
+            isolateScope.getWeather(scope.destination);
 
             httpBackend.flush();
 
@@ -292,20 +292,20 @@ describe('Testing Angular Js', function () {
             expect(scope.removeTest).toBe(2);
         })
 
-        it('it should generate the correct html', function(){
-            var templateAsHtml = template.html();
+        // fit('it should generate the correct html', function(){
+        //     var templateAsHtml = template.html();
 
-            expect(templateAsHtml).toContain("Rajkot, Gujarat");
+        //     expect(templateAsHtml).toContain("Rajkot");
 
-            scope.destination.city = "Pune";
-            scope.destination.state = "Maharashtra";
+        //     // scope.destination.city = "Pune";
+        //     // scope.destination.state = "Maharashtra";
 
-            scope.$digest();
-            templateAsHtml = template.html();
+        //     // scope.$digest();
+        //     // templateAsHtml = template.html();
 
-            expect(templateAsHtml).toContain("Pune, Maharashtra");
+        //     // expect(templateAsHtml).toContain("Pune, Maharashtra");
             
-        })
+        // })
 
     })
 
